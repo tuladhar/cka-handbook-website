@@ -15,7 +15,7 @@
   <meta property="og:type" content="website">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    let countdown = 5;
+    let countdown = 15;
     function startRedirect() {
       const counter = document.getElementById("counter");
       const interval = setInterval(() => {
@@ -32,13 +32,29 @@
 </head>
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
   <div class="text-center">
+    <!-- Main CKA Book -->    
     <img src="cover.png" width=600 />
     <h1 class="text-3xl font-bold text-gray-800 mb-4">CKA Handbook - Preview Edition</h1>
     <p class="text-lg text-gray-600">Redirecting you to Gumroad in 
       <span id="counter" class="font-bold text-blue-600">3</span> seconds...
     </p>
     <p class="mt-4 text-sm text-gray-500">If not redirected, <a href="https://ptuladhar.gumroad.com/l/cka-handbook" class="text-blue-500 underline">click here</a>.</p>
+    
+    <!-- Divider -->
+    <hr class="my-8 border-gray-300">
+
+    <!-- Cross-Promotion: CKS -->
+    <div class="mt-6">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Also Available</h2>
+      <a href="https://cks.purutuladhar.com" class="block max-w-sm mx-auto transition">
+        <center><img src="cks-cover.png" width=300 alt="CKS Handbook cover by Puru Tuladhar" class="rounded-t-lg"></center>
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-gray-800">CKS Handbook - 2nd Edition</h3>
+          <p class="text-sm text-gray-600">The essential guide for mastering Kubernetes security and passing the CKS exam with confidence.</p>
+          <span class="inline-block mt-3 text-blue-600 font-semibold">Get the book →</span>
+        </div>
+      </a>
+    </div>
   </div>
 </body>
 </html>
-
