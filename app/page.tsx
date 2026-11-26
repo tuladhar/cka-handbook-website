@@ -324,10 +324,6 @@ export default function Home() {
           Buy the book for $15
         </Link>
       </section>
-
-      <footer className="bg-ink px-4 py-6 text-center text-sm text-white/60">
-        © {new Date().getFullYear()} Puru Tuladhar
-      </footer>
     </div>
   )
 }
