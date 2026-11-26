@@ -52,7 +52,7 @@ export default function Home() {
             />
             <Link
               href={BUY_URL}
-              className="mt-8 w-[240px] rounded-md bg-k8s px-6 py-3 text-center text-lg font-semibold text-white shadow-sm transition-colors hover:bg-deep sm:w-[280px] md:w-full"
+              className="mt-8 w-[240px] rounded-md bg-k8s px-6 pb-2.5 pt-3.5 font-display text-xl text-center font-bold text-white shadow-sm transition-colors hover:bg-deep sm:w-[280px] md:w-full"
             >
               Buy the book for $15
             </Link>
@@ -62,12 +62,12 @@ export default function Home() {
         <div className="min-w-0">
         {/* Hero */}
         <section className="pb-16 pt-10 md:py-24">
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h1 className="text-4xl tracking-tight sm:text-5xl">
             Certified Kubernetes Administrator (CKA) Exam Guide
           </h1>
           <p className="mt-4 text-xl text-deep">The missing book by a Kubestronaut</p>
 
-          <ul className="mt-8 max-w-xl space-y-5 text-lg">
+          <ul className="mt-8 max-w-xl space-y-5 text-xl">
             {[
               "Written by Nepal's first Kubestronaut, who has passed all five Kubernetes certifications.",
               "Practical and hands-on, focused on the real exam. No fluff.",
@@ -94,7 +94,7 @@ export default function Home() {
               />
             </div>
             <div className="order-1 min-w-0">
-              <h2 className="text-3xl font-semibold tracking-tight">Try it before you buy</h2>
+              <h2 className="text-3xl tracking-tight">Try it before you buy</h2>
               <p className="mt-4 text-lg text-slate">
                 The free sample includes the preface, the exam domains and the start of Chapter 2, where you build a
                 two-node lab cluster from scratch. No email address needed.
@@ -104,7 +104,7 @@ export default function Home() {
                   href={SAMPLE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-md border-2 border-k8s px-5 py-2.5 font-semibold text-deep transition-colors hover:bg-k8s hover:text-white"
+                  className="rounded-md border-2 border-k8s px-5 pb-2 pt-3 font-display text-lg font-bold text-deep transition-colors hover:bg-k8s hover:text-white"
                 >
                   Download the sample (PDF)
                 </Link>
@@ -115,7 +115,7 @@ export default function Home() {
 
         {/* FAQ */}
         <section className="border-t border-rule py-16 md:py-20" aria-labelledby="faq-heading">
-          <h2 id="faq-heading" className="text-3xl font-semibold tracking-tight">
+          <h2 id="faq-heading" className="text-3xl tracking-tight">
             Questions
           </h2>
           <div className="mt-8 max-w-3xl divide-y divide-rule border-y border-rule">
@@ -144,7 +144,7 @@ export default function Home() {
               className="h-36 w-36 rounded-full object-cover lg:h-40 lg:w-40"
             />
             <div className="max-w-2xl">
-              <h2 id="author-heading" className="text-3xl font-semibold tracking-tight">
+              <h2 id="author-heading" className="text-3xl tracking-tight">
                 About the author
               </h2>
               <p className="mt-2 text-lg text-deep">Puru Tuladhar, CNCF Kubestronaut</p>
@@ -207,7 +207,7 @@ export default function Home() {
               />
             </Link>
             <div className="max-w-2xl">
-              <h2 id="cks-heading" className="text-3xl font-semibold tracking-tight">
+              <h2 id="cks-heading" className="text-3xl tracking-tight">
                 Going for the CKS next?
               </h2>
               <p className="mt-4 text-lg text-slate">
