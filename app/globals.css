@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f6f8fb;
+  color: #0e1a2e;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-spartan), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid #326ce5;
+  outline-offset: 3px;
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .faq-sign {
+  transform: rotate(45deg);
+}
+.faq-sign {
+  transition: transform 150ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-sign {
+    transition: none;
+  }
+}
