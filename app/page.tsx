@@ -160,14 +160,14 @@ export default function Home() {
                   {article.thumbnail ? (
                     <Image
                       src={article.thumbnail}
-                      width={160}
-                      height={90}
+                      width={224}
+                      height={126}
                       alt=""
-                      className="aspect-video w-32 flex-shrink-0 rounded-[4px] object-cover sm:w-40"
+                      className="aspect-video w-40 flex-shrink-0 rounded-[4px] border border-rule object-cover sm:w-56"
                     />
                   ) : (
                     <div
-                      className="flex aspect-video w-32 flex-shrink-0 items-center justify-center rounded-[4px] bg-gradient-to-br from-[#1530d8] to-k8s font-display text-xl font-bold text-white sm:w-40"
+                      className="flex aspect-video w-40 flex-shrink-0 items-center justify-center rounded-[4px] bg-gradient-to-br from-[#1530d8] to-k8s font-display text-xl font-bold text-white sm:w-56"
                       aria-hidden="true"
                     >
                       CKA
