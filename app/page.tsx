@@ -37,54 +37,53 @@ export default function Home() {
         .
       </div>
 
-      <main className="mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Hero */}
-        <section className="grid items-center gap-12 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-24">
-          <div className="min-w-0">
-            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-              Certified Kubernetes Administrator (CKA) Exam Guide
-            </h1>
-            <p className="mt-4 text-xl text-deep">The missing book by a Kubestronaut</p>
-
-            <ul className="mt-8 max-w-xl space-y-3 border-l-2 border-k8s pl-5">
-              <li>Written by Nepal&apos;s first Kubestronaut, who has passed all five Kubernetes certifications.</li>
-            </ul>
-
-            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-              <Link
-                href={BUY_URL}
-                className="rounded-md bg-k8s px-6 py-3 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-deep"
-              >
-                Buy the book for $15
-              </Link>
-            </div>
-          </div>
-
-          <div className="flex justify-center md:justify-end">
+      <main className="mx-auto max-w-6xl px-4 sm:px-6 md:grid md:grid-cols-[280px_minmax(0,1fr)] md:gap-14 lg:grid-cols-[340px_minmax(0,1fr)] lg:gap-20">
+        {/* Cover stays in view while the content scrolls (desktop) */}
+        <aside className="pt-10 md:sticky md:top-10 md:self-start md:pt-24">
+          <div className="flex flex-col items-center md:items-stretch">
             <Image
               src="/images/book-cover.png"
-              width={380}
-              height={537}
+              width={340}
+              height={481}
               alt="Certified Kubernetes Administrator (CKA) Exam Guide cover"
-              className="w-[280px] rounded-[4px] shadow-[0_30px_60px_-20px_rgba(27,63,153,0.45)] sm:w-[340px] md:w-[380px]"
+              className="w-[240px] rounded-[4px] shadow-[0_30px_60px_-20px_rgba(27,63,153,0.45)] sm:w-[280px] md:w-full"
               priority
             />
+            <Link
+              href={BUY_URL}
+              className="mt-8 w-[240px] rounded-md bg-k8s px-6 py-3 text-center text-lg font-semibold text-white shadow-sm transition-colors hover:bg-deep sm:w-[280px] md:w-full"
+            >
+              Buy the book for $15
+            </Link>
           </div>
+        </aside>
+
+        <div className="min-w-0">
+        {/* Hero */}
+        <section className="pb-16 pt-10 md:py-24">
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+            Certified Kubernetes Administrator (CKA) Exam Guide
+          </h1>
+          <p className="mt-4 text-xl text-deep">The missing book by a Kubestronaut</p>
+
+          <ul className="mt-8 max-w-xl space-y-3 border-l-2 border-k8s pl-5">
+            <li>Written by Nepal&apos;s first Kubestronaut, who has passed all five Kubernetes certifications.</li>
+          </ul>
         </section>
 
         {/* Sample */}
         <section id="sample" className="border-t border-rule py-16 md:py-20">
-          <div className="grid items-center gap-12 md:grid-cols-2">
-            <div className="order-2 flex justify-center md:order-1">
+          <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
+            <div className="order-2 flex justify-center lg:justify-end">
               <Image
                 src="/images/cka-exam-guide-sample.png"
                 width={420}
                 height={594}
                 alt="Sample page from Chapter 1: exam domains and weighting"
-                className="w-full max-w-[420px] rounded-[4px] border border-rule bg-white shadow-[0_20px_40px_-24px_rgba(14,26,46,0.35)]"
+                className="w-full max-w-[320px] rounded-[4px] border border-rule bg-white shadow-[0_20px_40px_-24px_rgba(14,26,46,0.35)]"
               />
             </div>
-            <div className="order-1 min-w-0 md:order-2">
+            <div className="order-1 min-w-0">
               <h2 className="text-3xl font-semibold tracking-tight">Try it before you buy</h2>
               <p className="mt-4 text-lg text-slate">
                 The free sample includes the preface, the exam domains and the start of Chapter 2, where you build a
@@ -129,13 +128,13 @@ export default function Home() {
 
         {/* Author */}
         <section className="border-t border-rule py-16 md:py-20" aria-labelledby="author-heading">
-          <div className="grid items-start gap-10 md:grid-cols-[220px_1fr]">
+          <div className="grid items-start gap-10 lg:grid-cols-[160px_1fr]">
             <Image
               src="/images/author-profile.png"
               width={220}
               height={220}
               alt="Puru Tuladhar"
-              className="h-40 w-40 rounded-full object-cover md:h-[220px] md:w-[220px]"
+              className="h-36 w-36 rounded-full object-cover lg:h-40 lg:w-40"
             />
             <div className="max-w-2xl">
               <h2 id="author-heading" className="text-3xl font-semibold tracking-tight">
@@ -190,8 +189,8 @@ export default function Home() {
 
         {/* After the CKA */}
         <section className="border-t border-rule py-16 md:py-20" aria-labelledby="cks-heading">
-          <div className="grid items-center gap-10 md:grid-cols-[180px_1fr]">
-            <Link href={CKS_URL} className="mx-auto block w-36 md:w-[180px]">
+          <div className="grid items-center gap-10 lg:grid-cols-[140px_1fr]">
+            <Link href={CKS_URL} className="block w-32 lg:w-[140px]">
               <Image
                 src="/images/cks-cover.png"
                 width={180}
@@ -217,6 +216,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </div>
       </main>
     </div>
   )
