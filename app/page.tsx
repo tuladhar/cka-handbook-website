@@ -6,44 +6,6 @@ const CKS_URL = "https://cks.purutuladhar.com"
 const SAMPLE_URL =
   "https://github.com/tuladhar/certified-kubernetes-administrator-exam-guide/blob/main/Certified%20Kubernetes%20Administrator%20Exam%20Guide%20-%20Puru%20Tuladhar%20-%20Sample.pdf"
 
-const domains = [
-  {
-    name: "Cluster Architecture, Installation and Configuration",
-    short: "Architecture",
-    weight: 25,
-    color: "bg-[#326CE5]",
-    desc: "Node prep, kubeadm, cluster upgrades, HA control plane, Helm and Kustomize, RBAC, CNI/CSI/CRI, CRDs and operators.",
-  },
-  {
-    name: "Workloads and Scheduling",
-    short: "Workloads",
-    weight: 15,
-    color: "bg-[#6C97F0]",
-    desc: "Deployments, rolling updates and rollbacks, ConfigMaps and Secrets, autoscaling, scheduling constraints.",
-  },
-  {
-    name: "Services and Networking",
-    short: "Networking",
-    weight: 20,
-    color: "bg-[#2350B8]",
-    desc: "Services, Ingress and Gateway API, network policies, CoreDNS.",
-  },
-  {
-    name: "Storage",
-    short: "Storage",
-    weight: 10,
-    color: "bg-[#A9C1F5]",
-    desc: "Volumes, PersistentVolumes and claims, StorageClasses, access modes and reclaim policies.",
-  },
-  {
-    name: "Troubleshooting",
-    short: "Troubleshooting",
-    weight: 30,
-    color: "bg-[#1B3F99]",
-    desc: "Broken nodes, control plane components, workloads and networking. Find the fault and fix it under time pressure.",
-  },
-]
-
 const faqs = [
   {
     q: "Which version of the CKA exam does it cover?",
@@ -83,10 +45,6 @@ export default function Home() {
               Certified Kubernetes Administrator (CKA) Exam Guide
             </h1>
             <p className="mt-4 text-xl text-deep">The missing book by a Kubestronaut</p>
-            <p className="mt-6 max-w-xl text-lg text-slate">
-              A practical guide to the CKA exam. It follows the curriculum domain by domain and focuses on what you
-              need to be able to do on a live cluster in 120 minutes.
-            </p>
 
             <ul className="mt-8 max-w-xl space-y-3 border-l-2 border-k8s pl-5">
               <li>Written by Nepal&apos;s first Kubestronaut, who has passed all five Kubernetes certifications.</li>
@@ -115,51 +73,6 @@ export default function Home() {
               priority
             />
           </div>
-        </section>
-
-        {/* Exam domains */}
-        <section className="border-t border-rule py-16 md:py-20" aria-labelledby="domains-heading">
-          <div className="max-w-2xl">
-            <h2 id="domains-heading" className="text-3xl font-semibold tracking-tight">
-              Built around the exam weights
-            </h2>
-            <p className="mt-4 text-lg text-slate">
-              15 to 20 hands-on tasks, 120 minutes, 66% to pass. Each chapter maps to one exam domain, so you can
-              spend your time where the points are.
-            </p>
-          </div>
-
-          <div
-            className="mt-10 flex h-14 w-full overflow-hidden rounded-md"
-            role="img"
-            aria-label="Exam weights: Cluster Architecture 25%, Workloads 15%, Networking 20%, Storage 10%, Troubleshooting 30%"
-          >
-            {domains.map((d) => (
-              <div
-                key={d.name}
-                className={`${d.color} flex items-center justify-center border-r-2 border-paper text-sm font-semibold last:border-r-0 ${
-                  d.weight <= 10 ? "text-ink" : "text-white"
-                }`}
-                style={{ width: `${d.weight}%` }}
-              >
-                {d.weight}%
-              </div>
-            ))}
-          </div>
-
-          <ol className="mt-10 grid gap-x-12 md:grid-cols-2">
-            {domains.map((d) => (
-              <li key={d.name} className="flex gap-4 border-b border-rule py-5">
-                <span className={`${d.color} mt-1.5 h-3 w-3 flex-shrink-0 rounded-sm`} aria-hidden="true" />
-                <div>
-                  <h3 className="font-semibold">
-                    {d.name} <span className="font-normal text-slate">({d.weight}%)</span>
-                  </h3>
-                  <p className="mt-1 text-slate">{d.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
         </section>
 
         {/* Sample */}
