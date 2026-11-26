@@ -108,9 +108,6 @@ export default function Home() {
                 >
                   Download the sample (PDF)
                 </Link>
-                <Link href={BUY_URL} className="font-medium text-deep underline underline-offset-4 hover:text-k8s">
-                  Buy the full book for $15
-                </Link>
               </div>
             </div>
           </div>
