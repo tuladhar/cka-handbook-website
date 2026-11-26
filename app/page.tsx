@@ -56,6 +56,7 @@ export default function Home() {
             >
               Buy the book for $15
             </Link>
+            <p className="mt-3 w-[240px] text-center text-slate sm:w-[280px] md:w-full">460+ copies sold</p>
           </div>
         </aside>
 
