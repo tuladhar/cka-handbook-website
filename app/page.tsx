@@ -90,8 +90,6 @@ export default function Home() {
 
             <ul className="mt-8 max-w-xl space-y-3 border-l-2 border-k8s pl-5">
               <li>Written by Nepal&apos;s first Kubestronaut, who has passed all five Kubernetes certifications.</li>
-              <li>Hands-on labs on real Ubuntu nodes, the same setup as the exam.</li>
-              <li>Early access with lifetime updates as new chapters ship.</li>
             </ul>
 
             <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
