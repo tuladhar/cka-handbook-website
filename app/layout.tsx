@@ -1,29 +1,38 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({
+const plex = IBM_Plex_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-plex",
+})
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-plex-mono",
 })
 
 export const metadata: Metadata = {
-  title: "CKA Exam Guide - The missing book by a Kubestronaut",
-  description: "A practical guide to passing the Certified Kubernetes Administrator (CKA) exam.",
-    generator: 'v0.dev'
+  title: "CKA Exam Guide: The missing book by a Kubestronaut",
+  description:
+    "A practical guide to passing the Certified Kubernetes Administrator (CKA) exam, aligned with the current curriculum.",
+  openGraph: {
+    title: "CKA Exam Guide: The missing book by a Kubestronaut",
+    description: "A practical guide to passing the Certified Kubernetes Administrator (CKA) exam.",
+    url: "https://cka.purutuladhar.com",
+    images: ["/images/book-cover.png"],
+  },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="bg-white font-sans antialiased">{children}</body>
+    <html lang="en" className={`${plex.variable} ${plexMono.variable}`}>
+      <body className="bg-paper font-sans text-ink antialiased">{children}</body>
     </html>
   )
 }

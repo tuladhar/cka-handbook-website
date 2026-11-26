@@ -20,9 +20,16 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
+        sans: ["var(--font-plex)", "system-ui", "sans-serif"],
+        mono: ["var(--font-plex-mono)", "ui-monospace", "monospace"],
       },
       colors: {
+        paper: "#F6F8FB",
+        ink: "#0E1A2E",
+        k8s: "#326CE5",
+        deep: "#1B3F99",
+        rule: "#D8DEE9",
+        slate: "#56627A",
         "dark-blue": "#0d1126",
         "darker-blue": "#080c1a",
         purple: "#a78bfa",
