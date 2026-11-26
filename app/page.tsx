@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: "Is the book finished?",
-    a: "It is an early access edition. Several chapters are complete and new ones are added regularly. Buying now includes every future update at no extra cost.",
+    a: "Yes. It covers all five exam domains, and you get lifetime updates as the exam curriculum changes.",
   },
   {
     q: "I'm just starting to prepare. Is this for me?",
@@ -315,7 +315,7 @@ export default function Home() {
           Walk into the exam knowing what to expect
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">
-          $15, with every future chapter and update included.
+          $15, with lifetime updates included.
         </p>
         <Link
           href={BUY_URL}
