@@ -2,22 +2,19 @@ import Image from "next/image"
 import Link from "next/link"
 import { CheckCircle, Download } from "lucide-react"
 
-// TODO: set the DevOps for Beginners enrollment URL
-const ENROLL_URL = "#"
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-dark-blue to-darker-blue text-white overflow-hidden">
       {/* Top banner */}
       <div className="relative z-20 bg-[#5521d9] px-4 py-3 text-center text-sm text-white">
-        <span>New: DevOps for Beginners training</span>
+        <span>Also by Puru: CKS Handbook - 2nd Edition</span>
         <span className="mx-3 opacity-80">•</span>
-        <span>5 weeks, hands-on labs</span>
+        <span>Master Kubernetes security</span>
         <span className="mx-3 opacity-80">•</span>
-        <span>Limited seats</span>
+        <span>Only $15</span>
         <span className="mx-3 opacity-80">•</span>
-        <Link href={ENROLL_URL} className="font-bold uppercase underline underline-offset-4">
-          Enroll now
+        <Link href="https://cks.purutuladhar.com" className="font-bold uppercase underline underline-offset-4">
+          Get the CKS book
         </Link>
       </div>
 
@@ -31,24 +28,14 @@ export default function Home() {
           <div className="flex justify-center">
             <div className="relative">
               <div className="absolute -inset-2 bg-gradient-to-r from-purple to-blue rounded-lg blur-md opacity-70"></div>
-<div
-                className="relative flex w-[300px] md:w-[360px] aspect-[1/1.414] flex-col justify-between rounded-lg bg-gradient-to-br from-[#1530d8] via-[#2563eb] to-[#3b82f6] p-8 shadow-2xl"
-                role="img"
-                aria-label="Certified Kubernetes Administrator (CKA) Exam Guide cover"
-              >
-                <div className="mx-auto flex h-40 w-40 items-center justify-center rounded-full border-[10px] border-white/15">
-                  <div className="w-28 select-none bg-white py-1 text-center text-[#2563eb]">
-                    <div className="text-[10px] font-extrabold tracking-wider">CERTIFIED</div>
-                    <div className="text-lg font-extrabold leading-tight">kubernetes</div>
-                    <div className="text-[9px] font-extrabold tracking-wider">ADMINISTRATOR</div>
-                  </div>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold leading-tight">Certified Kubernetes Administrator (CKA) Exam Guide</p>
-                  <p className="mt-3 italic text-white/90">The missing book by a Kubestronaut</p>
-                </div>
-                <p className="text-xl font-semibold">Puru Tuladhar</p>
-              </div>
+<Image
+                src="/images/book-cover.png"
+                width={400}
+                height={566}
+                alt="Certified Kubernetes Administrator (CKA) Exam Guide cover"
+                className="relative rounded-lg shadow-2xl"
+                priority
+              />
             </div>
           </div>
 
