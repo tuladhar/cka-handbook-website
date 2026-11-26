@@ -308,22 +308,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      {/* Final CTA */}
-      <section className="bg-deep px-4 py-16 text-center text-white md:py-20">
-        <h2 className="mx-auto max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
-          Walk into the exam knowing what to expect
-        </h2>
-        <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">
-          $15, with lifetime updates included.
-        </p>
-        <Link
-          href={BUY_URL}
-          className="mt-8 inline-block rounded-md bg-white px-6 py-3 text-lg font-semibold text-deep transition-colors hover:bg-[#DCE7FF]"
-        >
-          Buy the book for $15
-        </Link>
-      </section>
     </div>
   )
 }
