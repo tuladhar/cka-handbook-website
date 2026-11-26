@@ -2,9 +2,25 @@ import Image from "next/image"
 import Link from "next/link"
 import { CheckCircle, Download } from "lucide-react"
 
+// TODO: set the DevOps for Beginners enrollment URL
+const ENROLL_URL = "#"
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-dark-blue to-darker-blue text-white overflow-hidden">
+      {/* Top banner */}
+      <div className="relative z-20 bg-[#5521d9] px-4 py-3 text-center text-sm text-white">
+        <span>New: DevOps for Beginners training</span>
+        <span className="mx-3 opacity-80">•</span>
+        <span>5 weeks, hands-on labs</span>
+        <span className="mx-3 opacity-80">•</span>
+        <span>Limited seats</span>
+        <span className="mx-3 opacity-80">•</span>
+        <Link href={ENROLL_URL} className="font-bold uppercase underline underline-offset-4">
+          Enroll now
+        </Link>
+      </div>
+
       {/* Animated background */}
       <div className="fixed inset-0 bg-cube-pattern opacity-20 z-0"></div>
 
@@ -289,6 +305,35 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CKS promo */}
+        <section className="mb-20">
+          <div className="grid items-center gap-8 rounded-lg border border-purple/30 bg-gradient-to-r from-purple/20 to-blue/20 p-8 md:grid-cols-3">
+            <div className="flex justify-center">
+              <Image
+                src="/images/cks-cover.png"
+                width={220}
+                height={300}
+                alt="CKS Handbook cover"
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+            <div className="md:col-span-2">
+              <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-purple-light">Also available</p>
+              <h2 className="mb-2 text-3xl font-bold text-gradient">CKS Handbook - 2nd Edition</h2>
+              <p className="mb-6 text-lg text-gray-300">
+                The essential guide for mastering Kubernetes security and passing the Certified Kubernetes Security
+                Specialist exam with confidence.
+              </p>
+              <Link
+                href="https://cks.purutuladhar.com"
+                className="inline-block rounded-lg bg-purple-dark px-4 py-2 text-xl font-medium text-white shadow-glow transition-colors hover:bg-purple"
+              >
+                Get the CKS Handbook →
+              </Link>
             </div>
           </div>
         </section>
