@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { CheckCircle } from "lucide-react"
+import { articles } from "@/data/articles"
 
 const BUY_URL = "https://ptuladhar.gumroad.com/l/cka-handbook"
 const CKS_URL = "https://cks.purutuladhar.com"
@@ -142,6 +143,60 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Exam articles */}
+        <section className="border-t border-rule py-16 md:py-20" aria-labelledby="articles-heading">
+          <h2 id="articles-heading" className="text-3xl tracking-tight">
+            Exam articles
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg text-slate">
+            Read my latest articles on CKA exam topics. They complement the book with additional insights.
+          </p>
+          <ul className="mt-8 divide-y divide-rule border-y border-rule">
+            {articles.map((article, i) => {
+              const body = (
+                <div className="flex items-center gap-5 py-5">
+                  {article.thumbnail ? (
+                    <Image
+                      src={article.thumbnail}
+                      width={160}
+                      height={90}
+                      alt=""
+                      className="aspect-video w-32 flex-shrink-0 rounded-[4px] object-cover sm:w-40"
+                    />
+                  ) : (
+                    <div
+                      className="flex aspect-video w-32 flex-shrink-0 items-center justify-center rounded-[4px] bg-gradient-to-br from-[#1530d8] to-k8s font-display text-xl font-bold text-white sm:w-40"
+                      aria-hidden="true"
+                    >
+                      CKA
+                    </div>
+                  )}
+                  <div className="min-w-0">
+                    <h3 className="text-xl leading-snug">{article.title}</h3>
+                    <p className="mt-1 text-slate">{article.date || "Coming soon"}</p>
+                  </div>
+                </div>
+              )
+              return (
+                <li key={article.url || `placeholder-${i}`}>
+                  {article.url ? (
+                    <Link
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block transition-colors hover:bg-white"
+                    >
+                      {body}
+                    </Link>
+                  ) : (
+                    body
+                  )}
+                </li>
+              )
+            })}
+          </ul>
         </section>
 
         {/* FAQ */}
