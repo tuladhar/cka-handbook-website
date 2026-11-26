@@ -180,12 +180,6 @@ export default function Home() {
                 The free sample includes the preface, the exam domains and the start of Chapter 2, where you build a
                 two-node lab cluster from scratch. No email address needed.
               </p>
-              <pre className="mt-6 overflow-x-auto rounded-md bg-ink p-4 font-mono text-sm leading-relaxed text-[#D6E2FF]">
-                <code>
-                  {`multipass launch -n control-plane -c 2 -m 2G 24.04
-multipass launch -n worker -c 1 -m 2G 24.04`}
-                </code>
-              </pre>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
                 <Link
                   href={SAMPLE_URL}
