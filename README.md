@@ -8,3 +8,8 @@ Landing page for https://cka.purutuladhar.com. Next.js + Tailwind, styled like c
 pnpm install
 pnpm dev
 ```
+
+## Deploy (Cloudflare Pages)
+
+- Build command: `pnpm build`
+- Build output directory: `out`
