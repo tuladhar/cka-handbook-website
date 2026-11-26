@@ -57,9 +57,6 @@ export default function Home() {
               >
                 Buy the book for $15
               </Link>
-              <Link href="#sample" className="font-medium text-deep underline underline-offset-4 hover:text-k8s">
-                Read the free sample
-              </Link>
             </div>
           </div>
 
