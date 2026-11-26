@@ -42,21 +42,26 @@ export default function Home() {
         {/* Cover stays in view while the content scrolls (desktop) */}
         <aside className="pt-10 md:sticky md:top-10 md:self-start md:pt-24">
           <div className="flex flex-col items-center md:items-stretch">
-            <Image
-              src="/images/book-cover.png"
-              width={340}
-              height={481}
-              alt="Certified Kubernetes Administrator (CKA) Exam Guide cover"
-              className="w-[240px] rounded-[4px] shadow-[0_30px_60px_-20px_rgba(27,63,153,0.45)] sm:w-[280px] md:w-full"
-              priority
-            />
+            <div className="relative w-[240px] sm:w-[280px] md:w-full">
+              <Image
+                src="/images/book-cover.png"
+                width={340}
+                height={481}
+                alt="Certified Kubernetes Administrator (CKA) Exam Guide cover"
+                className="w-full rounded-[4px] shadow-[0_30px_60px_-20px_rgba(27,63,153,0.45)]"
+                priority
+              />
+              <div className="absolute -bottom-6 -right-6 flex h-28 w-28 -rotate-[8deg] flex-col items-center justify-center rounded-full bg-k8s text-center font-display ring-4 ring-paper text-white shadow-[0_12px_24px_-10px_rgba(27,63,153,0.7)] lg:h-32 lg:w-32">
+                <span className="text-3xl font-bold leading-none lg:text-4xl">460+</span>
+                <span className="mt-1 text-sm font-semibold leading-tight">copies sold</span>
+              </div>
+            </div>
             <Link
               href={BUY_URL}
-              className="mt-8 w-[240px] rounded-md bg-k8s px-6 pb-2.5 pt-3.5 font-display text-xl text-center font-bold text-white shadow-sm transition-colors hover:bg-deep sm:w-[280px] md:w-full"
+              className="mt-12 w-[240px] rounded-md bg-k8s px-6 pb-2.5 pt-3.5 font-display text-xl text-center font-bold text-white shadow-sm transition-colors hover:bg-deep sm:w-[280px] md:w-full"
             >
               Buy the book for $15
             </Link>
-            <p className="mt-3 w-[240px] text-center text-slate sm:w-[280px] md:w-full">460+ copies sold</p>
           </div>
         </aside>
 
@@ -80,6 +85,31 @@ export default function Home() {
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* Bonus walkthrough video */}
+        <section className="border-t border-rule py-16 md:py-20" aria-labelledby="video-heading">
+          <h2 id="video-heading" className="text-3xl tracking-tight">
+            Bonus video walkthroughs
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg text-slate">
+            The book comes with bonus video walkthroughs where I work through the material on a real cluster. Here
+            are 90 seconds from Chapter 2.1, launching the control-plane and worker nodes.
+          </p>
+          <video
+            className="mt-8 aspect-[1692/1080] w-full rounded-md border border-rule bg-ink shadow-[0_20px_40px_-24px_rgba(14,26,46,0.35)]"
+            controls
+            playsInline
+            preload="metadata"
+            poster="/videos/cka-walkthrough-poster.jpg"
+          >
+            <source src="/videos/cka-walkthrough-teaser.mp4" type="video/mp4" />
+            Your browser can&apos;t play this video.{" "}
+            <a href="/videos/cka-walkthrough-teaser.mp4" className="underline">
+              Download the clip
+            </a>
+            .
+          </video>
         </section>
 
         {/* Sample */}
@@ -151,8 +181,7 @@ export default function Home() {
               <p className="mt-2 text-lg text-deep">Puru Tuladhar, CNCF Kubestronaut</p>
               <p className="mt-5 text-slate">
                 I&apos;ve spent close to a decade as a DevOps engineer working with Linux, Kubernetes and AWS. I hold
-                all five Kubernetes certifications (KCNA, KCSA, CKAD, CKA and CKS) and I&apos;m an AWS Certified
-                Solutions Architect at Associate and Professional level.
+                all five Kubernetes certifications (KCNA, KCSA, CKAD, CKA and CKS).
               </p>
               <p className="mt-4 text-slate">
                 I&apos;ve been where you are: studying for the CKA and trying to work out what really matters. This
