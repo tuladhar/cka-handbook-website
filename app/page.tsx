@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { CheckCircle } from "lucide-react"
 
 const BUY_URL = "https://ptuladhar.gumroad.com/l/cka-handbook"
 const CKS_URL = "https://cks.purutuladhar.com"
@@ -66,8 +67,17 @@ export default function Home() {
           </h1>
           <p className="mt-4 text-xl text-deep">The missing book by a Kubestronaut</p>
 
-          <ul className="mt-8 max-w-xl space-y-3 border-l-2 border-k8s pl-5">
-            <li>Written by Nepal&apos;s first Kubestronaut, who has passed all five Kubernetes certifications.</li>
+          <ul className="mt-8 max-w-xl space-y-5 text-lg">
+            {[
+              "Written by Nepal's first Kubestronaut, who has passed all five Kubernetes certifications.",
+              "Practical and hands-on, focused on the real exam. No fluff.",
+              "Prepare smartly and pass the CKA with confidence.",
+            ].map((point) => (
+              <li key={point} className="flex items-start gap-3">
+                <CheckCircle className="mt-0.5 h-6 w-6 flex-shrink-0 text-k8s" aria-hidden="true" />
+                <span>{point}</span>
+              </li>
+            ))}
           </ul>
         </section>
 
