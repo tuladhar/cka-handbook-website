@@ -89,7 +89,7 @@ export default function Home() {
                 src="/images/cka-exam-guide-sample.png"
                 width={420}
                 height={594}
-                alt="Sample page from Chapter 1: exam domains and weighting"
+                alt="Sample page from Chapter 2: preparing the underlying infrastructure for a Kubernetes cluster"
                 className="w-full max-w-[320px] rounded-[4px] border border-rule bg-white shadow-[0_20px_40px_-24px_rgba(14,26,46,0.35)]"
               />
             </div>
