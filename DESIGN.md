@@ -51,9 +51,10 @@ The tailwind config also defines a single-value `blue` color left over from CKS.
 3. **Hero:** the title, "The missing book by a Kubestronaut", and three checkmark points.
 4. **Bonus video walkthroughs:** a 90-second teaser in a native `<video>` player.
 5. **Try it before you buy:** a sample page image and "Download the sample (PDF)".
-6. **Questions:** an FAQ as native `<details>` accordions.
-7. **About the author:** photo, bio, and LinkedIn / X / GitHub links.
-8. **Going for the CKS next?:** the CKS cover with a link to cks.purutuladhar.com.
+6. **Exam articles:** a ruled list of the author's CKA articles, each with a 16:9 thumbnail, title and date, linking out to the article. Data lives in `data/articles.ts`. An entry without a `thumbnail` shows a blue "CKA" tile; an entry without a `url` isn't clickable.
+7. **Questions:** an FAQ as native `<details>` accordions.
+8. **About the author:** photo, bio, and LinkedIn / X / GitHub links.
+9. **Going for the CKS next?:** the CKS cover with a link to cks.purutuladhar.com.
 
 There is no footer and no closing buy section, by choice. The sticky buy button covers that on desktop.
 
@@ -94,6 +95,7 @@ The sample PDF lives in the book repo: `tuladhar/certified-kubernetes-administra
 
 ## Things to update by hand
 
+- **Articles:** add or edit entries in `data/articles.ts`. Put thumbnails in `public/images/articles/`.
 - **Copies sold:** "460+" is hardcoded in `app/page.tsx`. Update it from the Gumroad sales count from time to time.
 - **Price:** "$15" appears on the buy button. Keep it in sync with Gumroad.
 - **Curriculum date:** the FAQ says the book covers the February 2025 program changes. Update it when the exam changes.
