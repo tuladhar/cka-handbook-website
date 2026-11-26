@@ -36,10 +36,12 @@ export default function Home() {
                 role="img"
                 aria-label="Certified Kubernetes Administrator (CKA) Exam Guide cover"
               >
-                <div className="mx-auto rounded-full border-4 border-white/20 p-6 text-center">
-                  <div className="bg-white px-3 py-1 text-xs font-extrabold text-blue-600">CERTIFIED</div>
-                  <div className="bg-white px-3 text-xl font-extrabold leading-tight text-blue-600">kubernetes</div>
-                  <div className="bg-white px-3 py-1 text-xs font-extrabold text-blue-600">ADMINISTRATOR</div>
+                <div className="mx-auto flex h-40 w-40 items-center justify-center rounded-full border-[10px] border-white/15">
+                  <div className="w-28 select-none bg-white py-1 text-center text-[#2563eb]">
+                    <div className="text-[10px] font-extrabold tracking-wider">CERTIFIED</div>
+                    <div className="text-lg font-extrabold leading-tight">kubernetes</div>
+                    <div className="text-[9px] font-extrabold tracking-wider">ADMINISTRATOR</div>
+                  </div>
                 </div>
                 <div>
                   <p className="text-3xl font-bold leading-tight">Certified Kubernetes Administrator (CKA) Exam Guide</p>
